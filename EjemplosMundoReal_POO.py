@@ -13,7 +13,7 @@ class Libro:
             self.prestatario = usuario
             print(f"El libro '{self.titulo}' ha sido prestado a {usuario}.")
         else:
-            print(f"El libro '{self.titulo}' no está disponible para préstamo.")
+            print(f"El libro '{self.titulo}' no está disponible para préstam.")
 
     def devolver(self):
         if not self.disponible:
