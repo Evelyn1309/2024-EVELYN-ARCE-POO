@@ -12,7 +12,7 @@ def calcular_area_pentagono(lado: float) -> float:
     return area
 
 
-# Calcula el área de un hexagono regular dado el lado
+# Calcula el área de un hexagono regular dado el lado.
 def calcular_area_hexagono(lado: float) -> float:
     area = ((3 * math.sqrt(3)) / 2) * (lado ** 2)
     return area
