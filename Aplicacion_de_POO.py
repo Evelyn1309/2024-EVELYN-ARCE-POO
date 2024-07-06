@@ -80,7 +80,7 @@ print(producto_limpieza.detalles())  # Salida de Ejecucion: Producto: Producto C
 print(juguetes.detalles())  # Salida de Ejecucion: Juguetes: Barbie, Precio: $20, Cantidad: 10, Garantía: 1 mes
 print(ropa.detalles())  # Salida de Ejecucion: Ropa: Bracier, Precio: $5, Cantidad: 100, Talla: M, Color: Rosado
 
-# Aplicar los descuentos
+# Aplicar los descuentos a productos
 print(producto_limpieza.aplicar_descuento(2))  # Salida: El total a pagar tras aplicar un 20% de descuento: $1.23
 print(juguetes.aplicar_descuento(4))  # Salida: El total a pagar tras aplicar un 5% de descuento: $18.80
 print(ropa.aplicar_descuento(5))  # Salida: El total a pagar tras aplicar un 10% de descuento: $4.75
