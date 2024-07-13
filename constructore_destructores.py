@@ -53,5 +53,5 @@ if __name__ == "__main__":
     # Encendemos la computadora
     mi_pc.encender()
 
-    # Al finalizar el proceso, la computadora se apaga automáticamente y se  elimina el objeto mi_pc
+    # Al finalizar el proceso, la computadora se apaga automáticamente y se  elimina el objeto mi_pc.
     del mi_pc
