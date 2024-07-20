@@ -1,13 +1,20 @@
 import os
+import subprocess
 
 
-def mostrar_codigo(ruta_script):
+def mostrar_codigo_y_ejecutar(ruta_script):
     # Asegúrate de que la ruta al script es absoluta
     ruta_script_absoluta = os.path.abspath(ruta_script)
     try:
         with open(ruta_script_absoluta, 'r') as archivo:
-            print(f"\n--- Código de {ruta_script} ---\n")  # Imprime el codigo de la ruta selecionada
-            print(archivo.read())  # lee el archivo y lo imprie
+            print(f"\n--- Código de {ruta_script} ---\n")  # Imprime el codigo de la ruta seleccionada
+            print(archivo.read())  # lee el archivo y lo imprime
+
+        print(f"\n--- Ejecutando {ruta_script} ---\n")
+        resultado = subprocess.run(['python', ruta_script_absoluta], capture_output=True, text=True)
+        print(resultado.stdout)
+        if resultado.stderr:
+            print("Errores:", resultado.stderr)
     except FileNotFoundError:
         print("El archivo no se encontró.")
     except Exception as e:
@@ -39,7 +46,7 @@ def mostrar_menu():
         elif eleccion in opciones:
             # Asegura que el path sea absoluto
             ruta_script = os.path.join(ruta_base, opciones[eleccion])
-            mostrar_codigo(ruta_script)
+            mostrar_codigo_y_ejecutar(ruta_script)
         else:
             print("Opción no válida. Por favor, vuelve a intentarlo.")
 
