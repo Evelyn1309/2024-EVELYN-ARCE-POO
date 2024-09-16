@@ -39,7 +39,7 @@ boton_agregar = tk.Button(ventana, text="Agregar",
 boton_agregar.pack()  # Coloca el botón en la ventana
 
 # Lista para mostrar los datos agregados
-lista_datos = tk.Listbox(ventana, width=50, height=10, background='#81F7F3')  # Crea una lista para mostrar los datos
+lista_datos = tk.Listbox(ventana, width=80, height=30, background='#81F7F3')  # Crea una lista para mostrar los datos
 # con tamaño especificado
 lista_datos.pack()  # Coloca la lista en la ventana
 
